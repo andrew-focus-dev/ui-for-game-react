@@ -1,0 +1,19 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 55px;
+  background-color: #021713;
+  border: 2px solid #0daa8e;
+}
+
+.wrap > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 17px;
+  text-transform: uppercase;
+  cursor: pointer;
+}

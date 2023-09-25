@@ -1,0 +1,22 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 63px;
+}
+
+.wrap > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+}
+
+.wrap > div:nth-child(2) {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

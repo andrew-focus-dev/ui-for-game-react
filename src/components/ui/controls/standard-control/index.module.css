@@ -1,0 +1,39 @@
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 5px;
+  column-gap: 5px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.wrap > div {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap > div:nth-child(4) {
+  transform: rotate(270deg);
+}
+
+.wrap > div:nth-child(5) {
+  transform: rotate(180deg);
+}
+
+.wrap > div:nth-child(6) {
+  transform: rotate(90deg);
+}
+
+.top {
+  background-color: red;
+}

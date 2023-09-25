@@ -1,0 +1,52 @@
+.wrap {
+  height: 34px;
+  position: relative;
+}
+
+.valueWrap {
+  height: 34px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+  font-size: 18px;
+  color: #fff;
+  height: 100%;
+}
+
+.menu {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+  padding-top: 10px;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  color: #0daa8e;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 8px 0;
+  cursor: pointer;
+}

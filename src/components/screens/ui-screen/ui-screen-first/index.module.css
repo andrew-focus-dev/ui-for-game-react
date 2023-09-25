@@ -1,0 +1,71 @@
+.wrap {
+  max-width: 832px;
+  margin: 0 auto;
+  display: grid;
+  row-gap: 20px;
+}
+
+.doubleButtonsWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  max-width: 832px;
+}
+
+.simpleButtonsWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+
+.tripleButtonsWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+
+.iconsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+
+.iconsList > div {
+  display: grid;
+  row-gap: 10px;
+}
+
+.variantsList {
+  display: grid;
+  grid-template-columns: 5fr 5fr 1fr;
+  column-gap: 20px;
+}
+
+.variantsSecondList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+
+.controlSection {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+}
+
+.arrowList {
+  display: flex;
+  column-gap: 20px;
+}
+
+.controlList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.resetSection {
+  display: flex;
+  column-gap: 30px;
+}

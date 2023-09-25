@@ -1,0 +1,16 @@
+.navbar {
+  padding: 30px;
+  border-bottom: 2px solid gray;
+  margin-bottom: 40px;
+}
+
+.navItem {
+  font-size: 25px;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.navItem.active {
+  color: gray;
+  pointer-events: none;
+}

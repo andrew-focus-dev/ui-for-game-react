@@ -1,0 +1,30 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.iconWrap {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconWrap > svg {
+  position: absolute;
+}
+
+.iconWrap > span {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  z-index: 4;
+  position: absolute;
+}

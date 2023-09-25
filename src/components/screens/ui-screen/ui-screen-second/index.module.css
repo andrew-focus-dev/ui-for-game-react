@@ -1,0 +1,87 @@
+.wrap {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  row-gap: 30px;
+}
+
+.barScreen {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  column-gap: 20px;
+}
+
+.barScreenSecond {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+
+.batteryList {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.doubleScreen {
+  display: grid;
+  grid-template-columns: 1fr 6fr 6fr 6fr;
+  column-gap: 20px;
+}
+
+.doubleScreen > div {
+  display: grid;
+  row-gap: 20px;
+}
+
+.checkboxWrap {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.statusTogglesWrap {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.actionsWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.loginButtonsWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.selectBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 30px;
+}
+
+.booleanWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+.selectWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+.checkboxSecondWrap {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}

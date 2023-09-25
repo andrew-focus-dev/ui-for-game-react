@@ -1,0 +1,57 @@
+.wrap {
+  color: #fff;
+  padding-top: 20px;
+}
+
+.rangeWrap {
+  display: grid;
+  grid-template-columns: 22px 1fr 22px;
+}
+
+.rangeBody {
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  height: 22px;
+  position: relative;
+}
+
+.top {
+  position: absolute;
+  width: calc(100% + 15px);
+  top: -24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top > div {
+  transform: translateX(-4px);
+  color: #fff;
+}
+
+.btnLeft {
+  background-color: #0daa8e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26px;
+  font-size: 30px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%, 0 57%);
+  cursor: pointer;
+}
+
+.btnRight {
+  cursor: pointer;
+  background-color: #0daa8e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  height: 26px;
+  clip-path: polygon(0 0, 100% 0, 100% 57%, 75% 99%, 0 100%);
+}
+
+.rangeBodyWrap {
+  padding: 0 10px;
+  border-top: 2px solid #0daa8e;
+  border-bottom: 2px solid #0daa8e;
+}

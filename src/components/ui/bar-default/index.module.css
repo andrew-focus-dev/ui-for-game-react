@@ -1,0 +1,20 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  background-color: #0daa8e;
+  color: #fff;
+  height: 51px;
+  clip-path: polygon(6% 0, 100% 0, 100% 71%, 94% 100%, 0 99%, 0 31%);
+}
+
+.time {
+  font-size: 20px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}

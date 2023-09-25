@@ -1,0 +1,89 @@
+.tripleButton {
+  display: flex;
+  flex-direction: column;
+}
+
+.tripleButton button {
+  color: #0daa8e;
+  font-size: 20px;
+  width: 155px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 39px;
+}
+
+.tripleButton button:first-child {
+  background-image: url('data:image/svg+xml,<svg width="155" height="57" viewBox="0 0 155 57" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 39.8475H15.583L15.2895 40.1437L1 54.5695V15.0654L14.9173 1H154V39.8475H16Z" fill="%23021713" stroke="%230DAA8E" stroke-width="2" stroke-linecap="round"/></svg>');
+}
+
+.tripleButton button:nth-child(2) {
+  position: relative;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="155" height="57" viewBox="0 0 155 57" fill="none"><path d="M15.5 40H15.0858L14.7929 40.2929L1 54.0858V15.9142L15.9142 1H154V40H15.5Z" fill="%23021713" stroke="%230DAA8E" stroke-width="2" stroke-linecap="round"/></svg>');
+}
+
+.tripleButton button:last-child {
+  position: relative;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="155" height="40" viewBox="0 0 155 40" fill="none"><path d="M1 38.5L140.061 38.5L154 24.4778V1.00003L14.9392 1L1 15.0222V38.5Z" fill="%23021713" stroke="%230DAA8E" stroke-width="2" stroke-linecap="round"/></svg>');
+}
+
+.tripleButton button:nth-child(2):before,
+.tripleButton button:last-child:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #021713;
+  border-left: 2px solid #0daa8e;
+  z-index: -1;
+}
+
+.tripleButton.green button {
+  color: #fff;
+}
+
+.tripleButton.green button:first-child {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="155" height="57" viewBox="0 0 155 57" fill="none"><path d="M16 39.8475H15.583L15.2895 40.1437L1 54.5695V15.0654L14.9173 1H154V39.8475H16Z" fill="%230DAA8E" stroke="%230DAA8E" stroke-width="2" stroke-linecap="round"/></svg>');
+}
+
+.tripleButton.green button:nth-child(2) {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="155" height="57" viewBox="0 0 155 57" fill="none"><path d="M15.5 40H15.0858L14.7929 40.2929L1 54.0858V15.9142L15.9142 1H154V40H15.5Z" fill="%230DAA8E" stroke="%230DAA8E" stroke-width="2" stroke-linecap="round"/></svg>');
+}
+
+.tripleButton.green button:last-child {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="155" height="40" viewBox="0 0 155 40" fill="none"><path d="M1 38.5L140.061 38.5L154 24.4778V1.00003L14.9392 1L1 15.0222V38.5Z" fill="%230DAA8E" stroke="%230DAA8E" stroke-width="2" stroke-linecap="round"/></svg>');
+}
+
+.tripleButton.green button:nth-child(2):before,
+.tripleButton.green button:last-child:before {
+  border-left: none;
+  background-color: #0daa8e;
+}
+
+.tripleButton.disabled button {
+  color: #04372e;
+}
+
+.tripleButton.disabled button:first-child {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="155" height="57" viewBox="0 0 155 57" fill="none"><path d="M16 39.8475H15.583L15.2895 40.1437L1 54.5695V15.0654L14.9173 1H154V39.8475H16Z" fill="%230D7764" stroke="%230D7764" stroke-width="2" stroke-linecap="round"/></svg>');
+}
+
+.tripleButton.disabled button:nth-child(2) {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="155" height="57" viewBox="0 0 155 57" fill="none"><path d="M15.5 40H15.0858L14.7929 40.2929L1 54.0858V15.9142L15.9142 1H154V40H15.5Z" fill="%230D7764" stroke="%230D7764" stroke-width="2" stroke-linecap="round"/></svg>');
+}
+
+.tripleButton.disabled button:last-child {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="155" height="40" viewBox="0 0 155 40" fill="none"><path d="M1 38.5L140.061 38.5L154 24.4778V1.00003L14.9392 1L1 15.0222V38.5Z" fill="%230D7764" stroke="%230D7764" stroke-width="2" stroke-linecap="round"/></svg>');
+}
+
+.tripleButton.disabled button:nth-child(2):before,
+.tripleButton.disabled button:last-child:before {
+  border-left: none;
+  background-color: #0d7764;
+}
+
+.tripleButton.disabled button:hover {
+  cursor: default;
+}

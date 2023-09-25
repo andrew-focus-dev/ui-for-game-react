@@ -1,0 +1,28 @@
+.btn {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.body {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+}
+
+.btnTop {
+  padding-bottom: 25px;
+}
+
+.btnCenter {
+  margin-top: -32px;
+  padding-bottom: 25px;
+}
+
+.btnBottom {
+  margin-top: -32px;
+}

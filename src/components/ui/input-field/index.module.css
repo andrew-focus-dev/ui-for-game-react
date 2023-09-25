@@ -1,0 +1,33 @@
+.wrap {
+  height: 19px;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  column-gap: 10px;
+}
+
+.name {
+  background-color: #0daa8e;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 400;
+  padding-left: 4px;
+  display: flex;
+  align-items: center;
+  clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+}
+
+.inputWrap {
+}
+
+.input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(207, 255, 226, 0.16);
+  padding: 0 4px;
+}

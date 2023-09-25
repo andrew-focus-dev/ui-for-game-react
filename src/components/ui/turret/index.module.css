@@ -1,0 +1,88 @@
+.turret {
+  max-width: 100%;
+}
+
+.head {
+  padding-left: 13px;
+  padding-right: 10px;
+  width: 439.245px;
+  height: 43.04px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="440" height="44" viewBox="0 0 440 44" fill="none"><path d="M437.745 42.2014V28.8682L437.745 2.1615L15.4541 2.16152L1.49957 16.116V42.2014H437.745Z" fill="%230DAA8E" stroke="%230DAA8E" stroke-width="3" stroke-linecap="round"/></svg>');
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.num {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.title .num {
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.numWraper {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.content {
+  border: 3px solid #0daa8e;
+  border-top: none;
+  border-bottom: none;
+  padding: 20px 17px 20px 10px;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  color: #fff;
+  gap: 6px;
+}
+
+.field:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.fieldTitle {
+  font-size: 24px;
+  font-weight: 400;
+  width: 33%;
+  height: 35.218px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="134" height="36" viewBox="0 0 134 36" fill="none"><path d="M0.694489 35.4887H133.74L98.5219 0.270874H0.694489V35.4887Z" fill="%230DAA8E"/></svg>');
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+
+.fieldValue {
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 7px;
+  position: relative;
+  width: 67%;
+  padding-left: 5px;
+}
+
+.fieldValue:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #586c61;
+  border-radius: 2px;
+}
