@@ -12,11 +12,13 @@ interface IAxisControl {
 
 const AxisControl: FC<IAxisControl> = ({ arrowTypes }) => {
   return (
-    <div className={cls.wrap}>
-      <ArrowDefault type={arrowTypes[0]} />
-      <ArrowDefault type={arrowTypes[1]} />
-      <ArrowDefault type={arrowTypes[2]} />
-      <ArrowDefault type={arrowTypes[3]} />
+    <div className={cls.section}>
+      <div className={cls.wrap}>
+        <ArrowDefault type={arrowTypes[0]} />
+        <ArrowDefault type={arrowTypes[1]} />
+        <ArrowDefault type={arrowTypes[2]} />
+        <ArrowDefault type={arrowTypes[3]} />
+      </div>
     </div>
   )
 }

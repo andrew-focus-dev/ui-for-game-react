@@ -1,6 +1,5 @@
 .toggle {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="307" height="32" viewBox="0 0 307 32" fill="none"><path d="M291.581 31L305.523 16.8606V1.00003L14.9416 1L1 15.1394L1 31L291.581 31Z" fill="%23021713" stroke="%230DAA8E" stroke-width="2" stroke-linecap="round"/></svg>');
-  width: 306.523px;
+  width: 100%;
   height: 32px;
   display: flex;
   align-items: center;
@@ -20,8 +19,6 @@
 }
 
 .btn {
-  width: 152.454px;
-  height: 31.645px;
   font-weight: 400;
   color: #0daa8e;
   font-size: 18px;
@@ -29,7 +26,7 @@
 
 .btn.active {
   color: #fff;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="153" height="32" viewBox="0 0 153 32" fill="none"><path d="M138.412 31.6448L152.977 17.079V3.8147e-05L15.0892 7.62939e-06L0.523438 14.5658L0.52344 31.6447L138.412 31.6448Z" fill="%230DAA8E"/></svg>');
+  background-image: url('data:image/svg+xml,<svg  xmlns="http://www.w3.org/2000/svg" width="153" height="32" viewBox="0 0 153 32" fill="none"><path d="M138.412 31.6448L152.977 17.079V3.8147e-05L15.0892 7.62939e-06L0.523438 14.5658L0.52344 31.6447L138.412 31.6448Z" fill="%230DAA8E"/></svg>');
 }
 
 .small .head {
@@ -88,9 +85,9 @@
 
 .turret .toggle {
   margin-top: -1px;
-  width: 439.245px;
+  width: 100%;
   height: 66px;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="440" height="64" viewBox="0 0 440 64" fill="none"><path d="M437.745 2.229L1.49957 2.22902V15.5622V61.8344H423.79L437.745 47.8799L437.745 2.229Z" fill="%23021713" stroke="%230DAA8E" stroke-width="3" stroke-linecap="round"/></svg>');
+  background-image: url('data:image/svg+xml,<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="440" height="64" viewBox="0 0 440 64" fill="none"><path d="M437.745 2.229L1.49957 2.22902V15.5622V61.8344H423.79L437.745 47.8799L437.745 2.229Z" fill="%23021713" stroke="%230DAA8E" stroke-width="3" stroke-linecap="round"/></svg>');
   background-repeat: no-repeat;
 }
 
@@ -118,4 +115,11 @@
   background-position: center;
   background-repeat: no-repeat;
   text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 600px) {
+  .turret .toggle {
+    width: 100%;
+  }
 }

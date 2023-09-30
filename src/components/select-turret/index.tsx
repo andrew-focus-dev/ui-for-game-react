@@ -7,7 +7,7 @@ const SelectTurret = () => {
     <div className={cls.wraper}>
       <div className={cls.container}>
         <div className={cls.head}>
-          <h1>Виберіть Турель</h1>
+          <h2>Виберіть Турель</h2>
 
           <svg
             xmlns='http://www.w3.org/2000/svg'

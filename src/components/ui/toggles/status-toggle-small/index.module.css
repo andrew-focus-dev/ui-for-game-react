@@ -17,3 +17,11 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+
+@media screen and (max-width: 700px){
+  .wrap > div {
+    font-size: 25px;
+    letter-spacing: 5px;
+  }
+}

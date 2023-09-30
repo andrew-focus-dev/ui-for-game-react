@@ -5,10 +5,24 @@
   width: 240px;
   display: grid;
   row-gap: 6px;
+  z-index: 50;
 }
 
 .body {
   min-height: 329px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .wrap {
+    top: 80px;
+    background-color: #0daa8e !important;
+    border: 1px solid #fff;
+  }
+
+  .body {
+    min-height: 289px;
+  }
 }

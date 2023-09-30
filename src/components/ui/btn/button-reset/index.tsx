@@ -14,14 +14,16 @@ interface IButtonReset {
   state: IButtonStatesKey
   title: string
   text: string
+  onlyIcon?: boolean
 }
 
-const ButtonReset: FC<IButtonReset> = ({ state, title, text }) => {
+const ButtonReset: FC<IButtonReset> = ({ state, title, text, onlyIcon }) => {
   const config = IButtonStates[state]
 
   return (
     <div className={cls.wrap}>
-      <span>{title}</span>
+      {!onlyIcon && <span>{title}</span>}
+
       <div className={cls.iconWrap}>
         <svg
           width='38'

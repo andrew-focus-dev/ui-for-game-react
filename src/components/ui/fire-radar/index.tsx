@@ -55,6 +55,7 @@ const FireRadar: FC<IFireRadar> = ({ withPoint }) => {
             submit={() => alert(1)}
             type='greenSimple'
           />
+
         </div>
       </div>
     </div>

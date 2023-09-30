@@ -1,0 +1,16 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.wrap > div:nth-child(1) {
+  border-right: 1px solid #0d7764;
+}
+
+@media screen and (max-width: 1650px) {
+  .wrap {
+    display: grid;
+    grid-template-columns: 2fr;
+    row-gap: 100px;
+  }
+}

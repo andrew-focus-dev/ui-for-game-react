@@ -3,6 +3,7 @@
   width: 100%;
   background: #273533;
   padding: 30px 0;
+  margin-top: 100px;
 }
 
 .container {
@@ -35,7 +36,7 @@
   opacity: 0.4;
 }
 
-.head h1 {
+.head h2 {
   color: #fff;
   font-size: 34px;
   letter-spacing: 17px;
@@ -52,7 +53,6 @@
   padding-left: 10px;
   padding-right: 6px;
   padding-bottom: 10px;
-  border-top: 2px solid #0daa8e;
   border: 4px solid #0daa8e;
   background-color: #141919;
   position: relative;
@@ -88,7 +88,7 @@
 .tabs {
   display: flex;
   height: 55px;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="544" height="55" viewBox="0 0 544 55" fill="none"><path d="M1.5 1.5H542.5V53.5H1.5V1.5Z" fill="%23021713" stroke="%230DAA8E" stroke-width="3" stroke-linecap="round"/></svg>');
+  border: 2px solid #0daa8e;
 }
 
 .tabs button {
@@ -141,4 +141,24 @@
 
 .item {
   width: 439.245px;
+}
+
+@media screen and (max-width: 600px) {
+  .item {
+    width: 100%;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .tabs button {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+
+  .head h2 {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
 }

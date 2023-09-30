@@ -1,21 +1,22 @@
 import UiScreenFirst from '@/components/screens/ui-screen/ui-screen-first'
 import UiScreenSecond from '@/components/screens/ui-screen/ui-screen-second'
 import SelectTurret from '@/components/select-turret'
+import c from './style.module.css'
 
 const UiScreen = () => {
   return (
     <>
-      <div className='ui-wrap'>
+      <div className={c.wrap}>
         <div className='wrap'>
-          <UiScreenFirst />
+          <UiScreenFirst/>
         </div>
-
         <div className='wrap'>
-          <UiScreenSecond />
+          <UiScreenSecond/>
         </div>
       </div>
 
-      <SelectTurret />
+      <SelectTurret/>
+
     </>
   )
 }

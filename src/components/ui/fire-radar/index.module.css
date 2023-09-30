@@ -47,3 +47,9 @@
   font-size: 24px;
   font-weight: 400;
 }
+
+@media screen and (max-width: 1000px){
+  .screen {
+    height: 300px;
+  }
+}

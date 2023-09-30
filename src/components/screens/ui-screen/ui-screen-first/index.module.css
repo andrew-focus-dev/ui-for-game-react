@@ -58,6 +58,7 @@
   column-gap: 20px;
 }
 
+
 .controlList {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -65,7 +66,32 @@
   row-gap: 20px;
 }
 
-.resetSection {
+.resetSection, .settingSection {
   display: flex;
   column-gap: 30px;
+}
+
+.arrowListWrap {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 720px){
+  .doubleButtonsWrap, .simpleButtonsWrap, .tripleButtonsWrap, .iconsList,
+  .variantsList, .variantsSecondList, .controlSection, .controlList {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .doubleButtonsWrap > div, .simpleButtonsWrap > div,
+  .tripleButtonsWrap > div, .iconsList > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .resetSection {
+    flex-direction: column;
+    row-gap: 20px;
+  }
 }
