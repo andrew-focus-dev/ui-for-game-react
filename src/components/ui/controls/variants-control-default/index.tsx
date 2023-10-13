@@ -10,17 +10,22 @@ interface IVariantControlItem {
   isActive: boolean
   submit: any
   text: string
+  fontSize?: string
 }
 
 const VariantControlItem: FC<IVariantControlItem> = ({
   isActive,
   submit,
   text,
+  fontSize,
 }) => {
   return (
     <div
       onClick={submit}
-      style={isActive ? { backgroundImage: `url("${imgActive}")` } : {}}
+      style={{
+        backgroundImage: isActive ? `url("${imgActive}")` : '',
+        fontSize: fontSize ? fontSize : '24px',
+      }}
       className={isActive ? `${cls.item} ${cls.itemWhite}` : cls.item}
     >
       {text}
@@ -35,6 +40,7 @@ interface IVariantsControl {
   title?: string
   height?: string
   topVertical?: boolean
+  fontSize?: string
 }
 
 const VariantsControlDefault: FC<IVariantsControl> = ({
@@ -44,6 +50,7 @@ const VariantsControlDefault: FC<IVariantsControl> = ({
   title,
   height,
   topVertical,
+  fontSize,
 }) => {
   return (
     <div className={cls.wrap}>
@@ -70,11 +77,13 @@ const VariantsControlDefault: FC<IVariantsControl> = ({
           isActive={options[0].value === value.value}
           submit={() => submit(options[0])}
           text={options[0].title}
+          fontSize={fontSize}
         />
         <VariantControlItem
           isActive={options[1].value === value.value}
           submit={() => submit(options[1])}
           text={options[1].title}
+          fontSize={fontSize}
         />
       </div>
     </div>

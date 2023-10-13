@@ -6,12 +6,6 @@
   align-items: center;
 }
 
-.section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .wrap > svg {
   position: absolute;
 }

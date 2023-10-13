@@ -5,8 +5,6 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: #fff;
-  max-width: 500px;
-  width: 100%;
 }
 
 .wrap > div {
@@ -19,4 +17,11 @@
 .right {
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+@media (max-width: 1499px) {
+  .wrap {
+    height: 41px;
+    font-size: 14px;
+  }
 }

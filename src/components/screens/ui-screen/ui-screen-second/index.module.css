@@ -21,8 +21,6 @@
   display: flex;
   align-items: center;
   column-gap: 16px;
-  flex-wrap: wrap;
-  row-gap: 20px;
 }
 
 .doubleScreen {
@@ -86,34 +84,4 @@
   display: flex;
   align-items: center;
   column-gap: 10px;
-}
-
-@media screen and (max-width: 920px) {
-  .barScreen, .barScreenSecond, .doubleScreen {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
-    row-gap: 20px;
-  }
-
-
-  .statusTogglesWrap {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .barScreen, .barScreenSecond, .doubleScreen, .actionsWrap, .selectBlock, .loginButtonsWrap,
-  .selectWrap {
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: 20px;
-    row-gap: 20px;
-  }
-
-  .doubleScreen > div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
 }

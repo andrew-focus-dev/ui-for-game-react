@@ -30,7 +30,7 @@ const getTextWidth = (w: number | undefined) => {
   if (!w) return '0px'
   if (w > 220) return '14px'
   if (w > 150) return '8px'
-  return '4px'
+  return '8px'
 }
 const SuperRange: FC<ISuperRange> = ({ value, submit }) => {
   const [squareRef, { width }] = useElementSize()

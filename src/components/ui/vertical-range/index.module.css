@@ -54,3 +54,9 @@
   align-items: center;
   flex-direction: column;
 }
+
+@media (max-width: 1499px) {
+  .value {
+    font-size: 20px;
+  }
+}

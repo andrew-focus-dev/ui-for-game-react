@@ -5,7 +5,7 @@
 .top {
   height: 16px;
   margin-left: 4.5%;
-  width: 100%;
+  width: 95.5%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: flex;
@@ -37,10 +37,19 @@
   align-items: center;
   cursor: pointer;
   color: #0daa8e;
-  font-size: 24px;
 }
 
 .itemWhite {
   color: #fff;
-  font-size: 24px;
+}
+
+@media (max-width: 1499px) {
+  .body {
+    height: 36px !important;
+  }
+
+  .itemWhite,
+  .item {
+    font-size: 10px !important;
+  }
 }

@@ -48,3 +48,9 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+
+@media (max-width: 1499px) {
+  .value {
+    font-size: 20px;
+  }
+}

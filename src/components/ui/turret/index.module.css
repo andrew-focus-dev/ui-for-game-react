@@ -5,10 +5,10 @@
 .head {
   padding-left: 13px;
   padding-right: 10px;
-  width: 100%;
+  width: 439.245px;
   height: 43.04px;
-  background-color: #0daa8e;
-  clip-path: polygon(3% 0, 100% 0, 100% 100%, 0 100%, 0% 38%);
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="440" height="44" viewBox="0 0 440 44" fill="none"><path d="M437.745 42.2014V28.8682L437.745 2.1615L15.4541 2.16152L1.49957 16.116V42.2014H437.745Z" fill="%230DAA8E" stroke="%230DAA8E" stroke-width="3" stroke-linecap="round"/></svg>');
+  background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,8 +61,7 @@
   font-weight: 400;
   width: 33%;
   height: 35.218px;
-  clip-path: polygon(0 0, 78% 0, 100% 100%, 0% 100%);
-  background-color: #0daa8e;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="134" height="36" viewBox="0 0 134 36" fill="none"><path d="M0.694489 35.4887H133.74L98.5219 0.270874H0.694489V35.4887Z" fill="%230DAA8E"/></svg>');
   display: flex;
   align-items: center;
   padding-left: 12px;
@@ -86,15 +85,4 @@
   height: 2px;
   background-color: #586c61;
   border-radius: 2px;
-}
-
-
-@media screen and (max-width: 600px){
-  .fieldTitle {
-    font-size: 18px;
-  }
-
-  .fieldValue {
-    font-size: 14px;
-  }
 }

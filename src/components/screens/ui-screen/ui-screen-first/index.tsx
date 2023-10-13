@@ -393,7 +393,7 @@ const UiScreenFirst = () => {
         </div>
       </div>
       <div className={cls.controlSection}>
-        <div className={cls.arrowListWrap}>
+        <div>
           <div className={cls.arrowList}>
             <ArrowSimple rotate={-180} type='simple' />
             <ArrowSimple type='hover' />
@@ -403,7 +403,6 @@ const UiScreenFirst = () => {
         </div>
         <div className={cls.controlList}>
           <AxisControl arrowTypes={['hover', 'simple', 'simple', 'simple']} />
-
           <AxisControl
             arrowTypes={['superHover', 'simple', 'simple', 'simple']}
           />
@@ -429,7 +428,7 @@ const UiScreenFirst = () => {
         <ButtonReset text='R' title='Перезарядка' state='disabled' />
       </div>
 
-      <div className={cls.settingSection}>
+      <div className={cls.resetSection}>
         <ButtonConfig state='simple' />
         <ButtonConfig state='hover' />
         <ButtonConfig state='disabled' />

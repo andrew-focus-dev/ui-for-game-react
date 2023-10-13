@@ -1,7 +1,8 @@
-import cls from './index.module.css'
-import DoubleActionsButton from "@/components/ui/btn/double-actions-button";
+import Toggle from '../toggles/toggle'
 
-const Turret = () => {
+import cls from './index.module.css'
+
+const Turret = ({ item }: { item: number }) => {
   return (
     <div className={cls.turret}>
       <div className={cls.head}>
@@ -39,19 +40,14 @@ const Turret = () => {
           <div className={cls.fieldValue}>Стабільно</div>
         </div>
       </div>
-
-      <DoubleActionsButton
-        type='dark'
-        submit={() => alert('submit')}
-        cancel={() => alert('cancel')}
-        titles={['Спостерігати', 'Керувати']}
+      <Toggle
+        turret
+        onChange={() => console.log('Toggle change')}
+        variants={[
+          { title: 'Спостерігати', active: false },
+          { title: 'Керувати', active: item === 1 },
+        ]}
       />
-
-      {
-        /*
-
-         */
-      }
     </div>
   )
 }

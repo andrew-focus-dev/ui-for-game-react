@@ -1,11 +1,11 @@
 .wrap {
-  width: 230px;
+  width: 170px;
   display: grid;
   row-gap: 7px;
 }
 
 .screen {
-  height: 403px;
+  height: 303px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: relative;
@@ -48,8 +48,9 @@
   font-weight: 400;
 }
 
-@media screen and (max-width: 1000px){
-  .screen {
-    height: 300px;
+@media (max-width: 1499px) {
+  .name,
+  .distance {
+    font-size: 16px;
   }
 }

@@ -3,11 +3,10 @@
 }
 
 .radar {
-  scale: 0.7;
   position: absolute;
   z-index: 3;
-  right: 50px;
-  bottom: -20px;
+  right: 70px;
+  bottom: 30px;
 }
 
 .point {
@@ -57,22 +56,4 @@
 .body img {
   width: 100%;
   height: 100%;
-}
-
-@media screen and (max-width: 600px) {
-  .name {
-    font-size: 10px;
-  }
-
-  .action {
-    font-size: 10px;
-  }
-
-  .body {
-    height: 420px;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-
 }

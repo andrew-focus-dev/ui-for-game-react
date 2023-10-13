@@ -1,6 +1,5 @@
-import {useCallback, useEffect, useRef, useState} from 'react'
-import {Swiper, SwiperSlide} from 'swiper/react';
-import 'swiper/css';
+import { useState } from 'react'
+
 import ButtonConfig from '@/components/ui/btn/button-config'
 import FireRadar from '@/components/ui/fire-radar'
 import Camera from '@/components/ui/camera'
@@ -23,10 +22,7 @@ import Login from '@/components/login'
 import imgLeft from '@/assets/images/compas.svg'
 
 import cls from './index.module.css'
-import {BsReverseLayoutSidebarInsetReverse} from "react-icons/bs";
-import {BiCamera} from "react-icons/bi";
-import {CgClose} from "react-icons/cg";
-import ArrowSimple from "@/components/ui/arrows/arrow-simple";
+import {useWindowSize} from "usehooks-ts";
 
 export const SimpleFireIcon = () => {
   return (
@@ -99,19 +95,19 @@ export const AmmoIcon = () => {
 }
 
 export const tripleOptionsFirst = [
-  {value: 'Виключити', label: 'Виключити'},
-  {value: 'Звичайний', label: 'Звичайний'},
-  {value: 'Балістичний', label: 'Балістичний'},
+  { value: 'Виключити', label: 'Виключити' },
+  { value: 'Звичайний', label: 'Звичайний' },
+  { value: 'Балістичний', label: 'Балістичний' },
 ]
 
 const tripleOptionsSecond = [
-  {value: 'Одиночні', label: 'Одиночні'},
-  {value: 'Черга', label: 'Черга'},
-  {value: 'Автоматичний', label: 'Автоматичний'},
+  { value: 'Одиночні', label: 'Одиночні' },
+  { value: 'Черга', label: 'Черга' },
+  { value: 'Автоматичний', label: 'Автоматичний' },
 ]
 
 const MainScreen = () => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+  const {width} = useWindowSize()
   const [activeTripleFirst, setActiveTripleFirst] = useState(
     tripleOptionsFirst[1]
   )
@@ -122,264 +118,110 @@ const MainScreen = () => {
   const [activeAI, setActiveAI] = useState(TestVariantsThird[1])
   const [hRangeValue, setHRangeValue] = useState(5)
   const [vRangeValue, setVRangeValue] = useState(5)
-  const [isRightBarVisible, setIsRightBarVisible] = useState(window.innerWidth > 1200)
-  const toggleSideBar = () => setIsRightBarVisible(!isRightBarVisible)
-
-  const [isCameraVisible, setCameraVisible] = useState(window.innerWidth > 1100)
-  const toggleCamera = () => setCameraVisible(!isCameraVisible)
-
-  const topRef = useRef<any>()
-
-  useEffect(() => {
-    topRef.current.scrollLeft = (topRef.current.scrollWidth - topRef.current.clientWidth) / 2
-  }, [])
-
-  useEffect(() => {
-    const resizeListener = () => setScreenWidth(window.innerWidth)
-    window.addEventListener('resize', resizeListener)
-    return () => window.removeEventListener('resize', resizeListener)
-  }, [])
-
-  const sliderRef = useRef<any>(null);
-
-  const handlePrev = useCallback(() => {
-    if (!sliderRef.current) return;
-    sliderRef.current.swiper.slidePrev();
-  }, []);
-
-  const handleNext = useCallback(() => {
-    if (!sliderRef.current) return;
-    sliderRef.current.swiper.slideNext();
-  }, []);
-
 
   return (
     <div className={cls.wrap}>
-      <div ref={topRef} className={cls.topLineWrap}>
-        <div
-          className={cls.topLine}
-          style={{backgroundImage: `url("${imgLeft}")`}}
-        />
-      </div>
-
-      <div className={cls.toggleBar} onClick={toggleSideBar}>
-        <BsReverseLayoutSidebarInsetReverse style={{color: isRightBarVisible ? '#0daa8e' : "#fff"}}/>
-      </div>
+      <div
+        className={cls.topLine}
+        style={{ backgroundImage: `url("${imgLeft}")` }}
+      />
 
       <div className={cls.options}>
-        <ButtonConfig submit={() => alert('submit')} state='simple'/>
+        <ButtonConfig submit={() => alert('submit')} state='simple' />
       </div>
 
-      <div className={cls.cameraToggle} onClick={toggleCamera}>
-        <BiCamera/>
+      <div className={cls.login}>
+        <Login />
       </div>
 
-      {
-        isRightBarVisible && (
-          <>
-            <div className={cls.login}>
-              <Login/>
-            </div>
-
-            <div className={cls.rightBar}>
-              <MainRightBar/>
-            </div>
-          </>
-        )
-      }
+      <div>
+        <MainRightBar />
+      </div>
 
       <div className={cls.fire}>
-        <FireRadar withPoint={true}/>
+        <FireRadar withPoint={true} />
       </div>
 
-      {
-        isCameraVisible && (
-          <div className={cls.camera}>
-            <div onClick={toggleCamera} className={cls.cameraOff}>
-              <CgClose/>
-            </div>
-            <Camera name='Камера 1 (17 градусів, дальномірна)'/>
+      <div className={cls.camera}>
+        <Camera name='Камера 1 (17 градусів, дальномірна)' />
+      </div>
+
+      <div className={cls.bottom}>
+        <div className={cls.firstDec}></div>
+        <div className={cls.centerBlock}>
+          <TripleToggle
+            submit={(v: any) => setActiveTripleFirst(v)}
+            value={activeTripleFirst}
+            options={tripleOptionsFirst}
+            isSmall={width < 1500}
+          />
+        </div>
+        <div className={cls.centerBlock}>
+          <TripleToggle
+            submit={(v: any) => setActiveTripleSecond(v)}
+            value={activeTripleSecond}
+            options={tripleOptionsSecond}
+            isSmall={width < 1500}
+          />
+        </div>
+        <div>
+          <VariantsControl
+            title='Запобіжник'
+            options={TestVariantsSecond}
+            value={activeFuse}
+            submit={(v: any) => setActiveFuse(v)}
+          />
+
+          <div className={cls.marginTop}>
+            <ButtonReverse
+              withIcon={true}
+              text='Вогонь'
+              submit={() => alert(1)}
+              type='greenSimple'
+            />
           </div>
-        )
-      }
+        </div>
+        <div>
+          <InfoItem
+            value='199999'
+            icon={<SimpleFireIcon />}
+            title='Використано'
+          />
 
-
-      {
-        screenWidth > 1200 ? (
-          <div className={cls.bottom}>
-            <div className={cls.firstDec}></div>
-            <div className={cls.centerBlock}>
-              <TripleToggle
-                submit={(v: any) => setActiveTripleFirst(v)}
-                value={activeTripleFirst}
-                options={tripleOptionsFirst}
-              />
-            </div>
-            <div className={cls.centerBlock}>
-              <TripleToggle
-                submit={(v: any) => setActiveTripleSecond(v)}
-                value={activeTripleSecond}
-                options={tripleOptionsSecond}
-              />
-            </div>
-            <div>
-              <VariantsControl
-                title='Запобіжник'
-                options={TestVariantsSecond}
-                value={activeFuse}
-                submit={(v: any) => setActiveFuse(v)}
-              />
-
-              <div className={cls.marginTop}>
-                <ButtonReverse
-                  withIcon={true}
-                  text='Вогонь'
-                  submit={() => alert(1)}
-                  type='greenSimple'
-                />
-              </div>
-            </div>
-            <div>
-              <InfoItem
-                value='199999'
-                icon={<SimpleFireIcon/>}
-                title='Використано'
-              />
-
-              <div className={cls.marginTop}>
-                <InfoItem value='199999' icon={<AmmoIcon/>} title='Залишилось'/>
-              </div>
-            </div>
-            <div>
-              <HorizontalRange
-                value={hRangeValue}
-                submit={(v: any) => setHRangeValue(v)}
-              />
-            </div>
-            <div>
-              <VerticalRange
-                value={vRangeValue}
-                submit={(v: any) => setVRangeValue(v)}
-              />
-            </div>
-            <div className={cls.axis}>
-              <AxisControl arrowTypes={['hover', 'simple', 'simple', 'simple']}/>
-            </div>
-            <div className={cls.rightItem}>
-              <VariantsControlDefault
-                height='52px'
-                options={TestVariantsThird}
-                value={activeAI}
-                submit={(v: any) => setActiveAI(v)}
-              />
-            </div>
+          <div className={cls.marginTop}>
+            <InfoItem value='199999' icon={<AmmoIcon />} title='Залишилось' />
           </div>
-        ) : (
-          <div className={cls.bottomMobile}>
-            <div className={cls.swiperButtons}>
-              <span onClick={handlePrev} style={{transform: "rotate(180deg) translateY(3px)"}}>
-                <ArrowSimple type="hover" />
-              </span>
-              <span onClick={handleNext}>
-                <ArrowSimple type="hover" />
-              </span>
-            </div>
-            <Swiper
-              ref={sliderRef}
-              spaceBetween={50}
-              breakpoints={{
-                // when window width is >= 640px
-                400: {
-                  slidesPerView: 2,
-                },
-                // when window width is >= 768px
-                768: {
-                  slidesPerView: 3,
-                },
-                968: {
-                  slidesPerView: 4,
-                },
-              }}
-            >
-              <SwiperSlide>
-                <div className={cls.centerBlock}>
-                  <TripleToggle
-                    submit={(v: any) => setActiveTripleFirst(v)}
-                    value={activeTripleFirst}
-                    options={tripleOptionsFirst}
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={cls.centerBlock}>
-                  <TripleToggle
-                    submit={(v: any) => setActiveTripleSecond(v)}
-                    value={activeTripleSecond}
-                    options={tripleOptionsSecond}
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <VariantsControl
-                    title='Запобіжник'
-                    options={TestVariantsSecond}
-                    value={activeFuse}
-                    submit={(v: any) => setActiveFuse(v)}
-                  />
+        </div>
 
-                  <div className={cls.marginTop}>
-                    <ButtonReverse
-                      withIcon={true}
-                      text='Вогонь'
-                      submit={() => alert(1)}
-                      type='greenSimple'
-                    />
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <InfoItem
-                    value='199999'
-                    icon={<SimpleFireIcon/>}
-                    title='Використано'
-                  />
+        <div>
+          <HorizontalRange
+            value={hRangeValue}
+            submit={(v: any) => setHRangeValue(v)}
+          />
+        </div>
 
-                  <div className={cls.marginTop}>
-                    <InfoItem value='199999' icon={<AmmoIcon/>} title='Залишилось'/>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <VerticalRange
-                    value={vRangeValue}
-                    submit={(v: any) => setVRangeValue(v)}
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={cls.axis}>
-                  <AxisControl arrowTypes={['hover', 'simple', 'simple', 'simple']}/>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={cls.rightItem}>
-                  <VariantsControlDefault
-                    height='52px'
-                    options={TestVariantsThird}
-                    value={activeAI}
-                    submit={(v: any) => setActiveAI(v)}
-                  />
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-        )
-      }
+        <div>
+          <VerticalRange
+            value={vRangeValue}
+            submit={(v: any) => setVRangeValue(v)}
+          />
+        </div>
 
-      <MainBar/>
+        <div className={cls.axis}>
+          <AxisControl arrowTypes={['hover', 'simple', 'simple', 'simple']} />
+        </div>
+        <div className={cls.rightItem}>
+          <VariantsControlDefault
+            height='52px'
+            options={TestVariantsThird}
+            value={activeAI}
+            submit={(v: any) => setActiveAI(v)}
+            fontSize={width > 1200 ? "24px" : "12px"}
+          />
+        </div>
+      </div>
+
+      <MainBar />
     </div>
   )
 }
